@@ -44,24 +44,30 @@ iv) The resultant matrix is then printed on the screen.
 A : Entering elements of matrix
 ```
 //To study and implement C++ 2D Array Matrices 
-#include <iostream>
+# include <iostream>
 using namespace std;
 
-int main() {
-    int temp[3][3], i, j,k,l;
-    for (i=0 ; i<3 ; i++){
-        for (j=0;j<3;j++){
-            cout<<" Enter element-("<<i<<j<<"):";
-            cin>>temp[i][j];
+int main(){
+    // Declaration
+    // 1st Meathod :
+    int array1[5][5]; 
+    // this means this array is going to be storing 5X5 matrix i-e 25 elements
+
+    // 2nd Meathod : Declaration with Initialization
+    int array2[2][2] = {1,2,3,4};
+    // this array will be having 2x2 matrix i-e 4 elements
+
+    //3rd Meathod : Declaration with Initialization
+    int array3[3][3] = {{1,1,1},{2,2,2},{3,3,3}};
+
+// Printing the value of the 3rd array which we made 
+    for(int i = 0;i<3;i++){
+        for (int j = 0 ; j <3;j++){
+            cout <<array3[i][j] << " "; 
         }
+        cout << endl; // this will print the second row in the second line
     }
-    for(k-0; k<3; k++){
-        for (l=0;l<3;l++){
-            cout<<temp[k][l];
-            cout<<" ";
-    }
-    cout <<endl;
-    }
+    return 0;
 }
 ```
 ![81](https://github.com/user-attachments/assets/2abdb9b3-eb6c-4e3f-8573-953586e84f51)
