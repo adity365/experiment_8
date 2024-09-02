@@ -66,99 +66,81 @@ int main() {
 ```
 ![81](https://github.com/user-attachments/assets/2abdb9b3-eb6c-4e3f-8573-953586e84f51)
 
- B : Addition of two matrices
+ B : Addition and Subtraction of two matrices
  ```
-//Addition of two matrices
+// Addition and Subtraction of 2 Matrix
+
 #include <iostream>
 using namespace std;
 
 int main() {
-    // Define matrix dimensions
-    int r1 = 3, c1 = 3;
-    int r2 = 3, c2 = 3;
+    int A[2][2], B[2][2], addition[2][2], subtraction[2][2];
 
-    int m1[r1][c1], m2[r2][c2], sum[r1][c1];
+    // Input values for matrix A
+    cout << endl << "Enter values for 2-D array A: " << endl;
+    for(int i = 0; i < 2; i++) {
+        for(int j = 0; j < 2; j++) {
+            cin >> A[i][j];
+        }
+    }
 
-    cout << "Enter elements of the first matrix:" << endl;
-    for (int i = 0; i < r1; ++i) {
-        for (int j = 0; j < c1; ++j) {
-            cout << "Enter element at position (" << i << ", " << j << "): ";
-            cin >> m1[i][j];
+    // Display values of matrix A
+    cout << endl << "Values of 2-D array A: " << endl;
+    for(int i = 0; i < 2; i++) {
+        for(int j = 0; j < 2; j++) {
+            cout << A[i][j] << " ";
         }
+        cout << endl; // This will print the second row in the second line
     }
-    cout << "Enter elements of the second matrix:" << endl;
-    for (int i = 0; i < r2; ++i) {
-        for (int j = 0; j < c2; ++j) {
-            cout << "Enter element at position (" << i << ", " << j << "): ";
-            cin >> m2[i][j];
-        }
-    }
-    for (int i = 0; i < r1; ++i) {
-        for (int j = 0; j < c1; ++j) {
-            sum[i][j] = m1[i][j] + m2[i][j];
-        }
-    }
- 
 
-    cout << endl << "Sum of matrices:" << endl;
-    for (int i = 0; i < r1; ++i) {
-        for (int j = 0; j < c1; ++j) {
-            cout << sum[i][j] << " ";
+    // Input values for matrix B
+    cout << endl << "Enter values for 2-D array B: " << endl;
+    for(int i = 0; i < 2; i++) {
+        for(int j = 0; j < 2; j++) {
+            cin >> B[i][j];
         }
-        cout << endl;
     }
+
+    // Display values of matrix B
+    cout << endl << "Values of 2-D array B: " << endl;
+    for(int i = 0; i < 2; i++) {
+        for(int j = 0; j < 2; j++) {
+            cout << B[i][j] << " ";
+        }
+        cout << endl; // This will print the second row in the second line
+    }
+
+    // Addition of matrices
+    cout << "Value of Addition Array are: " << endl;
+    for(int i = 0; i < 2; i++) {
+        for(int j = 0; j < 2; j++) {
+            addition[i][j] = A[i][j] + B[i][j];
+            cout << addition[i][j] << " ";
+        }
+        cout << endl; // This will print the second row in the second line
+    }
+
+    // Subtraction of matrices
+    for(int i = 0; i < 2; i++) {
+        for(int j = 0; j < 2; j++) {
+            subtraction[i][j] = A[i][j] - B[i][j];
+        }
+    }
+
+    // Display subtraction result
+    cout << endl << "Values of Subtraction Array are: " << endl;
+    for(int i = 0; i < 2; i++) {
+        for(int j = 0; j < 2; j++) {
+            cout << subtraction[i][j] << " ";
+        }
+        cout << endl; // This will print the second row in the second line
+    }
+
     return 0;
-    
 }
 ```
-![82](https://github.com/user-attachments/assets/4b9c4999-f88a-4a0d-bc30-d6ed40f46d2b)
-
-C: Subtraction of two matrices
-```
-//Subtraction of two matrices
-#include <iostream>
-using namespace std;
-
-int main() {
-    // Define matrix dimensions
-    int r1 = 3, c1 = 3;
-    int r2 = 3, c2 = 3;
-
-    int m1[r1][c1], m2[r2][c2], difference[r1][c1];
-
-    cout << "Enter elements of the first matrix:" << endl;
-    for (int i = 0; i < r1; ++i) {
-        for (int j = 0; j < c1; ++j) {
-            cout << "Enter element at position (" << i << ", " << j << "): ";
-            cin >> m1[i][j];
-        }
-    }
-    cout << "Enter elements of the second matrix:" << endl;
-    for (int i = 0; i < r2; ++i) {
-        for (int j = 0; j < c2; ++j) {
-            cout << "Enter element at position (" << i << ", " << j << "): ";
-            cin >> m2[i][j];
-        }
-    }
-    for (int i = 0; i < r1; ++i) {
-        for (int j = 0; j < c1; ++j) {
-            difference[i][j] = m1[i][j] - m2[i][j];
-        }
-    }
- 
-
-    cout << endl << "Difference of matrices:" << endl;
-    for (int i = 0; i < r1; ++i) {
-        for (int j = 0; j < c1; ++j) {
-            cout << difference[i][j] << " ";
-        }
-        cout << endl;
-    }
-    return 0;
-    
-}
-```
-![83](https://github.com/user-attachments/assets/a216f28b-1c86-465e-a9dd-eddb7a27cbcb)
+## Output :
+![image](https://github.com/user-attachments/assets/e71356d5-8853-4a8f-8b2a-865115ab3773)
 
 D : Multiplication of two matrices
 ```
