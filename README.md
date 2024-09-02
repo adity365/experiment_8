@@ -70,7 +70,8 @@ int main(){
     return 0;
 }
 ```
-![81](https://github.com/user-attachments/assets/2abdb9b3-eb6c-4e3f-8573-953586e84f51)
+![image](https://github.com/user-attachments/assets/ce6c8437-3203-4ed4-aa0f-34e6a939c895)
+
 
  B : Addition and Subtraction of two matrices
  ```
